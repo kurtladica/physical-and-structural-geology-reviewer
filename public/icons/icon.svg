@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GeoStud 1.0 Earth logo">
+  <title>GeoStud 1.0</title>
+  <rect width="64" height="64" rx="7" fill="#ffd43b" />
+  <circle cx="32" cy="32" r="17" fill="#7fb6cc" stroke="#101010" stroke-width="2.6" />
+  <g clip-path="url(#globe)">
+    <ellipse cx="32" cy="32" rx="7" ry="17" fill="none" stroke="#101010" stroke-width="1.2" opacity="0.4" />
+    <ellipse cx="32" cy="32" rx="13" ry="17" fill="none" stroke="#101010" stroke-width="1" opacity="0.25" />
+    <path d="M15 32h34M22 21.5h20M22 42.5h20" stroke="#101010" stroke-width="1.2" opacity="0.4" />
+    <path d="M22 22 L26 20 L29 23 L28 27 L29 30 L25 32 L22 29 L21 25 Z" fill="#4f9e5c" stroke="#101010" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M26 34 L30 33 L30.5 38 L28 43 L25.5 40 L26 36 Z" fill="#4f9e5c" stroke="#101010" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M34 30 L38 29 L40 33 L38.5 39 L35 41 L33.5 36 Z" fill="#4f9e5c" stroke="#101010" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M34 20 L39 18 L43.5 20.5 L45 24 L43 27 L39 26 L37 28 L34 25 Z" fill="#4f9e5c" stroke="#101010" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M42 36 L45.5 35 L46 39 L43 40 Z" fill="#4f9e5c" stroke="#101010" stroke-width="1.4" stroke-linejoin="round" />
+  </g>
+  <defs>
+    <clipPath id="globe">
+      <circle cx="32" cy="32" r="17" />
+    </clipPath>
+  </defs>
+</svg>

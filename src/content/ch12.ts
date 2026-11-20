@@ -1,0 +1,185 @@
+import type { Chapter } from '../types'
+
+const elements: [string, string, number, number, boolean, boolean][] = [
+  ['Al', 'Aluminium', 13, 27, true, false],
+  ['As', 'Arsenic', 33, 75, false, false],
+  ['Ba', 'Barium', 56, 137, false, false],
+  ['Be', 'Beryllium', 4, 9, false, false],
+  ['B', 'Boron', 5, 11, false, false],
+  ['Cd', 'Cadmium', 48, 112, false, false],
+  ['Ca', 'Calcium', 20, 40, true, true],
+  ['C', 'Carbon', 6, 12, false, true],
+  ['Cl', 'Chlorine', 17, 35, false, true],
+  ['Cr', 'Chromium', 24, 52, false, false],
+  ['Co', 'Cobalt', 27, 59, false, false],
+  ['Cu', 'Copper', 29, 64, false, true],
+  ['F', 'Fluorine', 9, 19, false, true],
+  ['Au', 'Gold', 79, 197, false, true],
+  ['He', 'Helium', 2, 4, false, false],
+  ['H', 'Hydrogen', 1, 1, false, true],
+  ['Fe', 'Iron', 26, 56, true, true],
+  ['Pb', 'Lead', 82, 207, false, true],
+  ['Mg', 'Magnesium', 12, 24, true, true],
+  ['Mn', 'Manganese', 25, 55, false, true],
+  ['Mo', 'Molybdenum', 42, 96, false, false],
+  ['Ne', 'Neon', 10, 20, false, false],
+  ['Ni', 'Nickel', 28, 59, false, true],
+  ['N', 'Nitrogen', 7, 14, false, false],
+  ['O', 'Oxygen', 8, 16, true, true],
+  ['P', 'Phosphorus', 15, 31, false, true],
+  ['Pt', 'Platinum', 78, 195, false, false],
+  ['K', 'Potassium', 19, 39, true, true],
+  ['Si', 'Silicon', 14, 28, true, true],
+  ['Ag', 'Silver', 47, 108, false, false],
+  ['Na', 'Sodium', 11, 23, true, true],
+  ['Sr', 'Strontium', 38, 88, false, false],
+  ['S', 'Sulfur', 16, 32, false, true],
+  ['Ti', 'Titanium', 22, 48, false, true],
+  ['U', 'Uranium', 92, 238, false, false],
+  ['Zn', 'Zinc', 30, 65, false, true],
+]
+
+export const ch12: Chapter = {
+  id: 'ch12',
+  number: 12,
+  title: 'Geologically Important Elements',
+  subtitle: 'The appendix reference: 36 elements and the periodic table',
+  pdf: 'List of Geologically Important Elements and the Periodic Table.pdf',
+  pages: 'pp. 1–2',
+  accent: '#4a6274',
+  practice: [
+    {
+      id: 'ch12-p1',
+      level: 'easy',
+      question: 'Which element is shown with atomic number 14 and atomic mass 28?',
+      hint: 'Look up the table in the lesson.',
+      steps: ['Atomic number 14 is silicon (Si).', 'Its atomic mass is 28.', 'Silicon is one of the eight main silicate elements.'],
+      answer: 'Silicon (Si).',
+    },
+    {
+      id: 'ch12-p2',
+      level: 'medium',
+      question: 'List the eight main silicate elements marked with an asterisk in the course table.',
+      hint: 'They are the elements that make up the silicon–oxygen tetrahedron and the common crustal silicate minerals.',
+      steps: [
+        'Read the asterisked entries: Al, Ca, Fe, Mg, O, K, Si, Na.',
+        'These are aluminium, calcium, iron, magnesium, oxygen, potassium, silicon and sodium.',
+        'They are the eight most abundant elements in the continental crust.',
+      ],
+      answer: 'Al, Ca, Fe, Mg, O, K, Si, Na (aluminium, calcium, iron, magnesium, oxygen, potassium, silicon, sodium).',
+    },
+    {
+      id: 'ch12-p3',
+      level: 'hard',
+      question:
+        'Using the table, explain why the atomic mass of an element is not the same as its atomic number, taking uranium and oxygen as examples.',
+      hint: 'Atomic number counts protons; atomic mass counts protons plus neutrons in the most stable isotope.',
+      steps: [
+        'Atomic number = number of protons in the nucleus, which defines the element.',
+        'Atomic mass = mass number of the most stable isotope = protons + neutrons.',
+        'Oxygen: atomic number 8, mass 16 → 8 protons and about 8 neutrons.',
+        'Uranium: atomic number 92, mass 238 → 92 protons and about 146 neutrons.',
+        'The large neutron excess in heavy nuclei is why atomic mass grows faster than atomic number.',
+      ],
+      answer:
+        'Atomic number counts protons only, while atomic mass counts protons plus neutrons. Oxygen has 8 protons/8 neutrons (16); uranium has 92 protons/146 neutrons (238).',
+    },
+  ],
+  topics: [
+    {
+      id: 'elements-table',
+      title: 'Elements, Atomic Number, and the Periodic Table',
+      tagline: 'The reference table behind every mineral formula',
+      source: { file: 'List of Geologically Important Elements and the Periodic Table.pdf', pages: 'pp. 1–2' },
+      objectives: [
+        'Read the course element table: symbol, name, atomic number, atomic mass.',
+        'Identify the eight main silicate elements.',
+        'Understand how the periodic table arranges elements.',
+      ],
+      intro: {
+        what: 'This appendix lists 36 geologically important elements with their symbols, atomic numbers and the atomic masses of their most stable isotopes, plus a colour-coded periodic table.',
+        why: 'Mineral formulas, radiometric dating and compositional classification all depend on these numbers.',
+        before: ['Atoms: protons, neutrons, electrons.', 'Mineral formulas from Chapter 5.'],
+      },
+      simple: [
+        {
+          t: 'p',
+          text: 'Think of the periodic table as the alphabet of rocks. The atomic number tells you how many protons an element has; the atomic mass tells you the total mass of its most stable isotope. Eight letters — O, Si, Al, Fe, Ca, Na, K, Mg — write almost every rock on Earth.',
+        },
+      ],
+      full: [
+        {
+          t: 'p',
+          text: 'The table includes **36 of the geologically important elements**, listed alphabetically by element name, with their atomic number and the atomic mass of their most stable isotope. In the original, the geologically most important elements are bolded and identified with a tilde (~), and the eight main elements of silicate minerals are identified with an asterisk (*).',
+        },
+        {
+          t: 'table',
+          head: ['Symbol', 'Name', 'Atomic number', 'Atomic mass', 'Silicate element', 'Geologically important'],
+          rows: elements.map(([symbol, name, z, mass, silicate, important]) => [
+            symbol + (silicate ? ' *' : '') + (important ? ' ~' : ''),
+            name,
+            String(z),
+            String(mass),
+            silicate ? 'Yes' : '—',
+            important ? 'Yes' : '—',
+          ]),
+          caption: 'The 36-element table. The full periodic table on page 2 is an image and could not be text-extracted; it is described rather than reproduced.',
+        },
+        {
+          t: 'p',
+          text: 'The periodic table lists all elements arranged in groups according to their atomic configuration; in the course table the elements are colour-coded by chemical and physical properties. The 8 silicate elements — **O, Si, Al, Fe, Ca, Na, K, Mg** — correspond to the eight most abundant elements in the continental crust (see Chapter 5).',
+        },
+        {
+          t: 'callout',
+          kind: 'note',
+          title: 'Atomic number versus atomic mass',
+          text: 'Atomic number counts protons only. Atomic mass is the mass number of the most stable isotope — protons plus neutrons. That is why uranium’s mass (238) is much larger than its atomic number (92).',
+        },
+      ],
+      example: {
+        problem:
+          'A mineral formula contains Fe and Mg. Using the table, give their atomic numbers and masses, and explain why they commonly substitute for one another in silicate minerals.',
+        given: ['Fe: iron.', 'Mg: magnesium.'],
+        required: 'Atomic data and a reason for substitution.',
+        steps: [
+          { label: 'Read the table', text: 'Fe has atomic number 26 and mass 56; Mg has atomic number 12 and mass 24.' },
+          { label: 'Check the mineral context', text: 'Both are ferromagnesian elements in minerals such as olivine, pyroxene, amphibole and biotite.' },
+          { label: 'Size and charge', text: 'Fe²⁺ and Mg²⁺ carry the same charge and have similar ionic radii, so one can replace the other in a crystal structure.' },
+          { label: 'Consequence', text: 'This substitution is why silicate minerals show a range of compositions rather than one fixed formula.' },
+        ],
+        answer: 'Fe: Z = 26, mass 56. Mg: Z = 12, mass 24. They substitute because of similar charge and ionic size.',
+      },
+      selfCheck: [
+        { q: 'How many elements are listed in the appendix table?', a: '36.' },
+        { q: 'Which eight elements are marked as the main silicate elements?', a: 'O, Si, Al, Fe, Ca, Na, K and Mg.' },
+        { q: 'What does atomic number represent?', a: 'The number of protons in an atom’s nucleus.' },
+      ],
+      quiz: [
+        {
+          type: 'mcq',
+          prompt: 'How many geologically important elements are listed in the appendix table?',
+          options: ['8', '36', '92', '118'],
+          answer: 1,
+          explain: 'The table lists 36 elements; 8 of them are the main silicate elements.',
+        },
+        {
+          type: 'short',
+          prompt: 'Give the symbol for silicon.',
+          accept: ['si'],
+          explain: 'Silicon is Si, atomic number 14, atomic mass 28.',
+        },
+        {
+          type: 'tf',
+          prompt: 'Atomic mass is the same as atomic number for every element.',
+          answer: false,
+          explain: 'Atomic number counts protons; atomic mass includes protons and neutrons, so they differ (e.g. uranium 92 vs 238).',
+        },
+      ],
+      cards: [
+        { front: 'Atomic number vs atomic mass', back: 'Atomic number = protons (defines the element). Atomic mass = mass number of the most stable isotope (protons + neutrons).' },
+        { front: 'Eight silicate elements', back: 'O, Si, Al, Fe, Ca, Na, K, Mg — also the eight most abundant elements in the continental crust.' },
+        { front: 'Appendix table', back: '36 geologically important elements listed alphabetically with symbol, name, atomic number and atomic mass of the most stable isotope.' },
+      ],
+    },
+  ],
+}

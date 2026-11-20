@@ -1,0 +1,60 @@
+import type { BankQuestion } from '../../types'
+import { m, s, t } from './helpers'
+
+const a = 'magma-crystallization'
+const b = 'intrusive-extrusive'
+const c = 'igneous-composition'
+
+export const bank6: BankQuestion[] = [
+  m(a, 'Magma is:', ['Molten rock beneath the surface', 'Lava at the surface', 'A type of sediment', 'A mineral'], 0, 'Magma is molten material below the surface; lava is melt that reaches the surface.'),
+  m(a, 'The liquid part of magma consists mainly of:', ['Mobile ions of silicon, oxygen and other common elements', 'Water only', 'Gas bubbles only', 'Crystals only'], 0, 'Silicate melt is dominated by silicon and oxygen with other cations.'),
+  m(a, 'The gaseous component of magma is called:', ['Volatiles', 'Phenocrysts', 'Matrix', 'Clasts'], 0, 'Volatiles vaporise at surface pressure.'),
+  m(a, 'Which is a common volcanic volatile?', ['Water vapour', 'Quartz', 'Olivine', 'Calcite'], 0, 'H₂O, CO₂ and SO₂ are the common volatiles.'),
+  m(a, 'As magma cools, crystals:', ['Grow larger and more numerous', 'Shrink and disappear', 'Turn into gas', 'Become sediment'], 0, 'Cooling allows ions to arrange into progressively larger crystals.'),
+  m(a, 'Magma can form by decompression because:', ['Lower pressure allows mantle rock to melt without added heat', 'Pressure adds heat', 'Water freezes', 'Rock becomes denser'], 0, 'Decompression melting occurs as hot rock rises.'),
+  m(a, 'Adding water to hot mantle rock:', ['Lowers its melting point', 'Raises its melting point', 'Has no effect', 'Turns it into sediment'], 0, 'Volatiles promote melting at lower temperatures.'),
+  m(a, 'Igneous rock is formed by:', ['Crystallisation of magma or lava', 'Compaction of mud', 'Metamorphism of shale', 'Evaporation of brine'], 0, 'Solidification of melt produces igneous rock.'),
+  m(a, 'Early-formed crystals in a cooling magma tend to be:', ['Better formed than later ones', 'Always microscopic', 'Made of ice', 'Sedimentary'], 0, 'They have more time and space to develop crystal faces.'),
+  m(a, 'The three components of magma are:', ['Liquid melt, solid crystals and dissolved gases', 'Sand, silt and clay', 'Water, oil and gas', 'Quartz, feldspar and mica'], 0, 'Magma contains melt, possible crystals and volatiles.'),
+  t(a, 'Lava is magma that has reached the surface.', true, 'The distinction is location, not composition.'),
+  t(a, 'Magma and lava always have identical gas contents.', false, 'Pressure release at the surface allows volatiles to exsolve.'),
+  t(a, 'Crystallisation is the process by which magma becomes solid rock.', true, 'Ions arrange into mineral crystals as the melt cools.'),
+  s(a, 'Name the dissolved gases in magma that vaporise at the surface.', ['volatiles'], 'Volatiles include water vapour, carbon dioxide and sulfur dioxide.'),
+
+  m(b, 'Intrusive igneous rocks are also called:', ['Plutonic', 'Volcanic', 'Sedimentary', 'Metamorphic'], 0, 'Plutonic rocks crystallise at depth.'),
+  m(b, 'Extrusive igneous rocks form:', ['At or near the surface', 'Deep in the mantle', 'In a river', 'In a glacier'], 0, 'Volcanic rocks solidify at the surface.'),
+  m(b, 'Slow cooling at depth produces:', ['Coarse-grained rocks', 'Glassy rocks', 'Fine-grained rocks only', 'Sediment'], 0, 'Large crystals have time to grow.'),
+  m(b, 'Rapid cooling at the surface produces:', ['Fine-grained or glassy rocks', 'Coarse-grained rocks', 'Fossils', 'Limestone'], 0, 'Little time for crystals to grow.'),
+  m(b, 'A phaneritic texture means:', ['Crystals are visible to the naked eye', 'The rock is glassy', 'The rock has holes', 'The rock is layered'], 0, 'Phaneritic rocks are coarse-grained.'),
+  m(b, 'An aphanitic texture means:', ['Crystals are too small to see easily', 'Crystals are very large', 'The rock is foliated', 'The rock contains fossils'], 0, 'Aphanitic rocks are fine-grained.'),
+  m(b, 'Porphyritic texture indicates:', ['Two stages of cooling with different rates', 'One very fast cooling event', 'Metamorphism', 'Weathering'], 0, 'Large phenocrysts grew slowly, then the matrix cooled quickly.'),
+  m(b, 'Obsidian is glassy because:', ['Lava cooled so fast that crystals could not form', 'It cooled very slowly', 'It contains fossils', 'It was metamorphosed'], 0, 'Rapid quenching produces volcanic glass.'),
+  m(b, 'Vesicular texture is caused by:', ['Gas bubbles trapped in cooling lava', 'Crystal alignment', 'Compaction', 'Folding'], 0, 'Escaping volatiles leave cavities.'),
+  m(b, 'A coarse-grained rock with the same composition as rhyolite is:', ['Granite', 'Basalt', 'Gabbro', 'Pumice'], 0, 'Granite and rhyolite are the intrusive and extrusive equivalents.'),
+  m(b, 'A fine-grained rock with the same composition as gabbro is:', ['Basalt', 'Granite', 'Diorite', 'Obsidian'], 0, 'Basalt is the extrusive equivalent of gabbro.'),
+  t(b, 'Intrusive rocks generally have larger crystals than extrusive rocks.', true, 'Slower cooling at depth allows larger crystals.'),
+  t(b, 'All extrusive rocks are glassy.', false, 'Many are fine-grained; glass forms only with very rapid quenching.'),
+  t(b, 'Pumice forms from gas-rich, rapidly cooled lava.', true, 'Trapped gas bubbles make pumice highly vesicular and light.'),
+  s(b, 'Name the igneous rock type that crystallises below the surface.', ['intrusive', 'plutonic', 'intrusive rock'], 'Intrusive (plutonic) rocks solidify at depth.'),
+
+  m(c, 'Granitic (felsic) magma is rich in:', ['Silica', 'Iron and magnesium', 'Calcium carbonate', 'Water only'], 0, 'Felsic compositions are silica-rich.'),
+  m(c, 'Basaltic (mafic) magma is rich in:', ['Iron and magnesium', 'Silica and potassium', 'Carbonate', 'Quartz'], 0, 'Mafic magmas are rich in dark ferromagnesian minerals.'),
+  m(c, 'Which composition has the highest silica content?', ['Granitic (felsic)', 'Andesitic', 'Basaltic', 'Ultramafic'], 0, 'Felsic magma has the most silica.'),
+  m(c, 'Which composition has the lowest viscosity?', ['Basaltic', 'Andesitic', 'Granitic', 'Rhyolitic'], 0, 'Low-silica basaltic lava flows most easily.'),
+  m(c, 'High silica content makes magma:', ['More viscous and explosive', 'Less viscous and runny', 'Cooler and solid', 'Denser than the mantle'], 0, 'Silica-rich melts polymerise and trap gas.'),
+  m(c, 'Granite is composed mainly of:', ['Quartz and potassium feldspar', 'Olivine and pyroxene', 'Calcite', 'Clay'], 0, 'Felsic rocks are dominated by quartz and feldspar with some dark minerals.'),
+  m(c, 'Basalt contains at least what percentage of dark silicate minerals?', ['45%', '10%', '25%', '70%'], 0, 'The lesson defines basaltic rock as at least 45% dark silicates.'),
+  m(c, 'Andesitic rock contains at least what percentage of dark silicate minerals?', ['10%', '25%', '45%', '70%'], 1, 'Andesitic is intermediate, with at least 25% dark minerals.'),
+  m(c, 'The extrusive equivalent of granite is:', ['Rhyolite', 'Basalt', 'Gabbro', 'Andesite'], 0, 'Rhyolite is the fine-grained volcanic equivalent.'),
+  m(c, 'The intrusive equivalent of andesite is:', ['Diorite', 'Granite', 'Gabbro', 'Rhyolite'], 0, 'Diorite is the coarse-grained intermediate rock.'),
+  m(c, 'The intrusive equivalent of basalt is:', ['Gabbro', 'Diorite', 'Granite', 'Pumice'], 0, 'Gabbro is coarse-grained and mafic.'),
+  m(c, 'Which pair has the same composition but different texture?', ['Granite and rhyolite', 'Granite and basalt', 'Gabbro and limestone', 'Obsidian and shale'], 0, 'They share felsic composition but cooled at different depths.'),
+  m(c, 'Felsic rocks are generally:', ['Lighter in colour and lower in density', 'Darker and denser', 'Always glassy', 'Always vesicular'], 0, 'Silica-rich rocks are light-toned and less dense.'),
+  m(c, 'Mafic rocks are generally:', ['Darker and denser', 'Lighter and less dense', 'Rich in quartz', 'Rich in carbonate'], 0, 'Iron- and magnesium-rich rocks are dark and dense.'),
+  t(c, 'Silica content controls magma viscosity.', true, 'More silica means more polymerisation and higher viscosity.'),
+  t(c, 'Basaltic lava is usually more explosive than rhyolitic lava.', false, 'Low-viscosity basalt usually erupts effusively; rhyolite is more explosive.'),
+  t(c, 'Andesitic composition is intermediate between granitic and basaltic.', true, 'It contains less silica than felsic rock and more than mafic rock.'),
+  t(c, 'Texture and composition are both needed to name an igneous rock.', true, 'Classification uses mineral composition plus grain size.'),
+  s(c, 'Name the fine-grained extrusive rock with granitic composition.', ['rhyolite'], 'Rhyolite is the volcanic equivalent of granite.'),
+  s(c, 'Name the coarse-grained intrusive rock with basaltic composition.', ['gabbro'], 'Gabbro is the plutonic equivalent of basalt.'),
+]

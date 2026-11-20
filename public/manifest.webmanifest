@@ -1,0 +1,31 @@
+{
+  "name": "GeoStud 1.0 — GS 21/L Study Companion",
+  "short_name": "GeoStud",
+  "description": "Offline-capable study companion for GS 21/L Physical and Structural Geology: lessons, quizzes, flashcards and progress, built from the course lesson PDFs.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff3d6",
+  "theme_color": "#ffd43b",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

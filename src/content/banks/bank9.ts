@@ -1,0 +1,62 @@
+import type { BankQuestion } from '../../types'
+import { m, s, t } from './helpers'
+
+const a = 'metamorphism-drivers'
+const b = 'metamorphic-textures'
+const c = 'metamorphic-environments'
+
+export const bank9: BankQuestion[] = [
+  m(a, 'Metamorphism is:', ['Change in a rock in the solid state', 'Melting and recrystallising', 'Weathering at the surface', 'Deposition of sediment'], 0, 'Metamorphism alters rock without melting it.'),
+  m(a, 'The original rock before metamorphism is called the:', ['Parent rock or protolith', 'Matrix', 'Clast', 'Phenocryst'], 0, 'The protolith is the starting material.'),
+  m(a, 'Metamorphic grade refers to:', ['The intensity of metamorphism', 'The age of the rock', 'The colour of the rock', 'The grain shape'], 0, 'Grade expresses how intense the metamorphic conditions were.'),
+  m(a, 'The main sources of heat for metamorphism are:', ['The geothermal gradient and nearby magma bodies', 'Sunlight and wind', 'Ocean currents', 'Radio waves'], 0, 'Heat comes from depth and from cooling intrusions.'),
+  m(a, 'The geothermal gradient is about:', ['25 °C per km', '1 °C per km', '100 °C per km', '250 °C per km'], 0, 'Temperature rises roughly 25 °C for each kilometre of depth.'),
+  m(a, 'Confining pressure:', ['Acts equally in all directions', 'Acts in one direction only', 'Always folds rock', 'Melts rock'], 0, 'It is like water pressure and does not by itself fold or fracture rock.'),
+  m(a, 'Differential stress:', ['Is unequal in different directions and can align minerals', 'Is equal in all directions', 'Melts the rock', 'Only affects fossils'], 0, 'Unequal stress deforms rock and produces foliation.'),
+  m(a, 'Chemically active fluids in metamorphism:', ['Dissolve and transport ions, aiding recrystallisation', 'Freeze the rock', 'Stop all reactions', 'Only add water to pores'], 0, 'Hot fluids promote recrystallisation and chemical change.'),
+  m(a, 'Metasomatism is:', ['Metamorphism accompanied by significant chemical change from fluids', 'Melting of the protolith', 'Weathering', 'Compaction of sediment'], 0, 'Fluids add or remove components, changing bulk composition.'),
+  m(a, 'Which is NOT a driver of metamorphism?', ['Heat', 'Confining pressure', 'Chemically active fluids', 'Photosynthesis'], 3, 'Photosynthesis is a biological process, not a metamorphic driver.'),
+  t(a, 'Metamorphism can occur without melting.', true, 'It is change in the solid state.'),
+  t(a, 'Confining pressure alone produces strong foliation.', false, 'Foliation requires differential stress or preferred mineral growth.'),
+  t(a, 'Increasing metamorphic grade generally means more intense conditions.', true, 'Grade reflects the intensity of heat and pressure.'),
+  s(a, 'Name the original rock from which a metamorphic rock forms.', ['parent rock', 'protolith'], 'The protolith is the parent rock.'),
+
+  m(b, 'Foliation is:', ['A planar arrangement of minerals or grain sizes', 'Random crystal orientation', 'A type of fracture', 'A fossil pattern'], 0, 'Foliation is a layered or aligned texture.'),
+  m(b, 'Which rock is the lowest-grade foliated metamorphic rock?', ['Slate', 'Schist', 'Gneiss', 'Marble'], 0, 'Slate is low-grade and derived from shale.'),
+  m(b, 'Slate is characterised by:', ['Excellent cleavage and fine grain', 'Coarse bands of light and dark minerals', 'Glassy texture', 'Vesicles'], 0, 'Slate splits into thin plates.'),
+  m(b, 'Phyllite is:', ['Between slate and schist in grade, with a sheen', 'Higher grade than gneiss', 'Nonfoliated', 'An igneous rock'], 0, 'Phyllite has a silky sheen from fine mica.'),
+  m(b, 'Schist is characterised by:', ['Coarse, visible foliated minerals such as mica', 'Glass', 'Fossils', 'Vesicles'], 0, 'Schist has medium- to coarse-grained foliation.'),
+  m(b, 'Gneiss is characterised by:', ['Banded light and dark minerals', 'Perfect flat cleavage', 'A glassy surface', 'Fossils'], 0, 'High-grade metamorphism segregates minerals into bands.'),
+  m(b, 'The correct order of increasing metamorphic grade is:', ['Slate → phyllite → schist → gneiss', 'Gneiss → schist → phyllite → slate', 'Schist → slate → gneiss → phyllite', 'Phyllite → gneiss → slate → schist'], 0, 'That is the classic foliated sequence.'),
+  m(b, 'Marble forms from:', ['Limestone', 'Shale', 'Sandstone', 'Basalt'], 0, 'Metamorphosed limestone becomes marble.'),
+  m(b, 'Quartzite forms from:', ['Quartz sandstone', 'Limestone', 'Shale', 'Granite'], 0, 'Quartz-rich sandstone recrystallises into quartzite.'),
+  m(b, 'Hornfels is typically:', ['A fine-grained nonfoliated contact-metamorphic rock', 'A coarse foliated rock', 'A sedimentary rock', 'A volcanic glass'], 0, 'Contact metamorphism produces hornfels.'),
+  m(b, 'Nonfoliated metamorphic rocks lack foliation because:', ['They contain mostly equant minerals and experienced little directed stress', 'They never experienced heat', 'They are sedimentary', 'They are always glassy'], 0, 'Minerals such as calcite and quartz do not align readily.'),
+  m(b, 'A porphyroblast is:', ['A large crystal grown during metamorphism', 'A volcanic bomb', 'A sedimentary clast', 'A fossil'], 0, 'Porphyroblasts grow large within a finer matrix.'),
+  m(b, 'Index minerals are useful because they:', ['Indicate the metamorphic grade', 'Measure density', 'Date the rock directly', 'Show cleavage'], 0, 'Their presence constrains temperature–pressure conditions.'),
+  m(b, 'Which rock would you expect from metamorphosed basalt at low grade?', ['Chlorite schist or greenschist', 'Marble', 'Quartzite', 'Anthracite'], 0, 'Mafic protoliths produce green, chlorite-rich rocks at low grade.'),
+  t(b, 'Foliation can form by aligned growth of platy minerals.', true, 'Mica and chlorite align perpendicular to stress.'),
+  t(b, 'Marble is a foliated metamorphic rock.', false, 'Marble is typically nonfoliated.'),
+  t(b, 'Increasing grade in a shale sequence produces slate, then schist, then gneiss.', true, 'That is the standard progression.'),
+  s(b, 'Name the nonfoliated metamorphic rock formed from limestone.', ['marble'], 'Limestone metamorphoses to marble.'),
+
+  m(c, 'Contact metamorphism occurs:', ['Around an igneous intrusion at low pressure', 'Deep in a subduction zone', 'At a mid-ocean ridge', 'Across a whole mountain belt'], 0, 'Hot magma bakes the surrounding rock, forming an aureole.'),
+  m(c, 'A contact aureole is:', ['The zone of altered rock around an intrusion', 'A volcanic crater', 'A sedimentary basin', 'A fault surface'], 0, 'The aureole surrounds the intrusion.'),
+  m(c, 'Hydrothermal metamorphism involves:', ['Hot, ion-rich fluids circulating through rock', 'Only dry heat', 'Glacial meltwater', 'Wind erosion'], 0, 'Fluids promote recrystallisation and chemical change.'),
+  m(c, 'Burial metamorphism occurs:', ['In subsiding basins with thick sediment piles', 'At the surface', 'In a lava flow', 'In a geyser'], 0, 'Deep burial raises temperature and pressure.'),
+  m(c, 'Subduction-zone metamorphism is dominated by:', ['Differential stress', 'No pressure', 'Only heating from the Sun', 'Evaporation'], 0, 'Shear and directed stress deform rock as it descends.'),
+  m(c, 'Regional metamorphism is:', ['The most common and widespread type', 'Restricted to a thin contact zone', 'Only found at mid-ocean ridges', 'Caused by meteorites'], 0, 'It affects broad regions during mountain building.'),
+  m(c, 'Fault-zone metamorphism is caused by:', ['Localised shear and crushing along faults', 'Evaporating water', 'Meteorite impacts', 'Weathering'], 0, 'Movement along faults produces localised deformation.'),
+  m(c, 'Impact metamorphism is caused by:', ['High-speed meteorite impacts', 'Groundwater circulation', 'Burial', 'Magma intrusion'], 0, 'Shock waves from impacts alter rocks instantly.'),
+  m(c, 'Which environment produces the widest aureole?', ['A large, hot intrusion at shallow depth', 'A thin lava flow', 'A cold fault', 'A river'], 0, 'Bigger, hotter intrusions bake a larger surrounding zone.'),
+  m(c, 'Mountain belts typically show which type of metamorphism?', ['Regional', 'Contact only', 'Impact only', 'Fault-zone only'], 0, 'Regional metamorphism accompanies mountain building.'),
+  m(c, 'Blueschist is associated with:', ['High-pressure, low-temperature subduction', 'Contact metamorphism', 'Burial at low pressure', 'Impact'], 0, 'Blueschist records the cold, high-pressure conditions of subduction.'),
+  m(c, 'Eclogite indicates:', ['Very high pressure, typical of deep subduction', 'Low-grade burial', 'Contact baking', 'Surface weathering'], 0, 'Eclogite forms at extreme pressure.'),
+  m(c, 'Which pairing is correct?', ['Contact metamorphism — aureole around an intrusion', 'Regional metamorphism — a single thin dyke', 'Impact metamorphism — a river delta', 'Burial metamorphism — a lava lake'], 0, 'Contact metamorphism creates an aureole.'),
+  t(c, 'Regional metamorphism affects broad areas of the crust.', true, 'It accompanies large-scale mountain building.'),
+  t(c, 'Contact metamorphism is caused mainly by directed tectonic stress.', false, 'It is caused mainly by heat from an intrusion at low pressure.'),
+  t(c, 'Hydrothermal metamorphism can change a rock’s bulk chemistry.', true, 'Fluids can add or remove ions.'),
+  t(c, 'Impact metamorphism requires a volcano.', false, 'It requires a meteorite impact.'),
+  s(c, 'Name the most common and widespread type of metamorphism.', ['regional metamorphism', 'regional'], 'Regional metamorphism affects broad mountain belts.'),
+  s(c, 'Name the metamorphism caused by heat from an intruding magma body.', ['contact metamorphism', 'thermal metamorphism', 'contact'], 'Contact (thermal) metamorphism bakes the surrounding rock.'),
+]
