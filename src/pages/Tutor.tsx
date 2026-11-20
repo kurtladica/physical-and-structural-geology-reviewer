@@ -6,6 +6,9 @@ import type { Block, Topic } from '../types'
 type Message = { role: 'user' | 'assistant'; content: string }
 type Status = 'checking' | 'ready' | 'unconfigured' | 'offline'
 
+/** Honours the deploy path, so the endpoint resolves under `/repository/` too. */
+const TUTOR_ENDPOINT = `${import.meta.env.BASE_URL}api/tutor`
+
 const modes = [
   { id: 'simpler', label: 'Explain it more simply', prompt: 'Explain this topic again in simpler language, with a new analogy.' },
   { id: 'example', label: 'Give another example', prompt: 'Give me another worked example that uses the same ideas.' },
@@ -86,14 +89,16 @@ export default function Tutor() {
   async function checkStatus() {
     setStatus('checking')
     try {
-      const response = await fetch('/api/tutor')
+      const response = await fetch(TUTOR_ENDPOINT)
       if (!response.ok) throw new Error(String(response.status))
       const data = (await response.json()) as { configured: boolean }
       setStatus(data.configured ? 'ready' : 'unconfigured')
       setStatusMessage('')
     } catch {
       setStatus('offline')
-      setStatusMessage('The tutor endpoint is not reachable. Start the app with `npm run dev` so /api/tutor is served.')
+      setStatusMessage(
+        'The tutor endpoint is not reachable. It needs a running server: use `npm run dev` locally, or host the /api/tutor route separately. Static hosting such as GitHub Pages serves the site without it.',
+      )
     }
   }
 
@@ -120,7 +125,7 @@ export default function Tutor() {
     setLoading(true)
 
     try {
-      const response = await fetch('/api/tutor', {
+      const response = await fetch(TUTOR_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
